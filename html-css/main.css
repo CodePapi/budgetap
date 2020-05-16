@@ -289,11 +289,16 @@ text-align: center;
         display: flex;
         flex-wrap: wrap;
     }*/
-    .time, .btndelete, .SN, .div, .cost{
+    .btndelete, .SN, .div, .cost{
      padding: 5px;
      font-size: small;
      width: 50px; 
-    
+     
+    }
+    .time{
+        padding: 5px;
+        width: 100px; 
+
     }
     .cost{
         padding-left: 50px;
