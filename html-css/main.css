@@ -4,6 +4,9 @@ html{
     background-color: #E6E6DC;
     font-family: Nunito;
 }
+.pointer{
+    cursor: pointer;
+}
 .section1{
     background-color: #81A594;
     height: 60vh;
@@ -28,13 +31,18 @@ text-align: center;
 }
 
 h1{
-    color: #E6E6DC;
+    color: #81A594;
     font-family: Nunito;
     font-size: larger;
 
 }
+.h1{
+    color: #E6E6DC;
+    font-family: Nunito;
+    font-size: larger;
+}
 .white{
-    padding-top: 20px;
+    
     color: #ffffff;
 }
 
@@ -126,8 +134,8 @@ border-radius: 10px;
     margin-top:30px;
 }
 div > .btn{
-    width: 244px;
-height: 78px;
+    width: 100pxpx;
+height: 58px;
 
 
 background: #81A594;
@@ -289,16 +297,11 @@ text-align: center;
         display: flex;
         flex-wrap: wrap;
     }*/
-    .btndelete, .SN, .div, .cost{
+    .time, .btndelete, .SN, .div, .cost{
      padding: 5px;
      font-size: small;
      width: 50px; 
-     
-    }
-    .time{
-        padding: 5px;
-        width: 100px; 
-
+    
     }
     .cost{
         padding-left: 50px;
@@ -347,7 +350,7 @@ ol>li{
  h3{
      font-size: xx-small;
  }
- .teal, .white{
+ .teal{
      padding-top: 5px;
  }
  .br{

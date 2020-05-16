@@ -4,10 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>budget planning app</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="html-css/main.css">
-
+  
 </head>
 <body>
+    <button id="addAmount" class="pointer">Add</button>
+<input type="number" id="newAmount">
+
+<div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div>
+        <div class="modal-body">
+          <p>Some text in the modal.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+  
+    </div>
+  </div>
     <main>
     <section class="section1">
 
@@ -15,16 +37,16 @@
     <section class="section2">
         <section class="wrapper">
             <section class="subwrapper">
-<h1>BUDGET PLANNING APP</h1>
+<h1 class="h1">BUDGET PLANNING APP</h1>
 <section class="mainsection">
     <section class="mainsection1">
         <div class="rect">
             <h3 class="budget teal">BUDGET AMOUNT</h3>
-            <h3 class="amount">2100000</h3>
+            <h3 class="amount" >N <span id="amountbudget">2100000</span></h3>
         </div>
         <br>
         <div class="sub-rect">
-            <h3 class="teal">TOP UP</h3>
+            <h3 class="teal pointer" id="top">TOP UP</h3>
         </div>
     </section>
     <section class="mainsection2">
@@ -33,10 +55,10 @@
     <input type="text" class="inputitem" id="input" placeholder="Purpose/Item">
 </div>
 <div>
-    <input type="number" class="inputcost" id="cost" placeholder="cost">
+    <input type="text" class="inputcost" id="cost" placeholder="cost">
 </div>
 <div>
-    <button type="button" class="inputbutton" id="create" value="Add" style="color: white; font-weight: bolder;">Add</button>
+    <div  class="inputbutton pointer btn" id="create"  style="color: white; font-weight: bolder;">Add</div>
 </div>
 </div>
 <section class="br hide"><br><br></section>
@@ -58,8 +80,9 @@
   <div>
 <h1 id="show" style="display: none !important;">0</h1>
 <h1 id="added"></h1>
-<div><h1>Total Ballance: </h1><h1 id="total"></h1>
-    <button id="checkSum">Check   Total</button>
+<div><h1>Total Amount : <span id="total"><span></h1>
+    <button id="checkSum" class="pointer">Check   Total</button>
+    <div><h1>Balance: <span id="balance"></span></h1></div>
 </div>
 
     </section>
@@ -69,13 +92,13 @@
 <br><br>
 <div class="rect3">
 <div class="pad1">
-    <div class="btn"><h3 class="white">Calculate</h3></div>
+    <div class="btn pointer" id="calculate"><h3 class="white">Calculate</h3></div>
 </div>
 <div class="pad1">
-    <div class="btn"><h3 class="white">Save as PDF</h3></div>
+    <div class="btn pointer"><h3 class="white" onclick="alert('will be available shortly')">Save as PDF</h3></div>
 </div>
 <div class="pad1">
-    <div class="btn"><h3 class="white">Save App</h3></div>
+    <div class="btn pointer"><h3 class="white" onclick="alert('will be available shortly')">Share App</h3></div>
 </div>
 </div>
 
@@ -89,5 +112,41 @@
     <script src="html-js/main.js">
 
     </script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+     
+     <script>
+        $(window).load(function(){        
+  $('#myModal').modal('show');
+   }); 
+   </script>
 </body>
+
+
+<!-- Button trigger modal -->
+<!--<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#topup">
+    Launch demo modal
+  </button>
+  
+  <!-- Modal -->
+  <!--<div class="modal fade" id="topup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+-->
 </html>
