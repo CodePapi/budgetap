@@ -6,26 +6,33 @@
     <title>budget planning app</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="html-css/main.css">
-  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+   
 </head>
 <body>
-    <button id="addAmount" class="pointer">Add</button>
-<input type="number" id="newAmount">
+    
 
-<div id="myModal" class="modal fade" role="dialog">
+<div id="myModal"  class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <!-- Modal content-->
-      <div class="modal-content">
+      <div class="modal-content" style="padding: 10px;">
+        <section style="border: 1px solid teal; background-color: white;">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Modal Header</h4>
+          <h4 class="modal-title">HI BUDDY!! HOW MUCH IS YOUR BUDGET</h4>
         </div>
         <div class="modal-body">
-          <p>Some text in the modal.</p>
+
+            
+            <input style="width: 90%; height: 80px;" type="number" id="newAmount" placeholder="Input Budget Amount Here...">
+
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <div class="modal-footer" style="display: flex;">
+            <button id="addAmount" class="pointer btn btn-primary" data-dismiss="modal">Add</button>
+          <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
         </div>
+        </section>
       </div>
   
     </div>
@@ -33,7 +40,7 @@
     <main>
     <section class="section1">
 
-    </section>
+    </section>l
     <section class="section2">
         <section class="wrapper">
             <section class="subwrapper">
@@ -42,11 +49,11 @@
     <section class="mainsection1">
         <div class="rect">
             <h3 class="budget teal">BUDGET AMOUNT</h3>
-            <h3 class="amount" >N <span id="amountbudget">2100000</span></h3>
+            <h3 class="amount" >N <span id="amountbudget">0</span></h3>
         </div>
         <br>
         <div class="sub-rect">
-            <h3 class="teal pointer" id="top">TOP UP</h3>
+            <h3 class="teal pointer" id="top"  class="btn btn-primary" data-toggle="modal" data-target="#myModal">TOP UP</h3>
         </div>
     </section>
     <section class="mainsection2">
@@ -55,7 +62,7 @@
     <input type="text" class="inputitem" id="input" placeholder="Purpose/Item">
 </div>
 <div>
-    <input type="text" class="inputcost" id="cost" placeholder="cost">
+    <input type="number" class="inputcost" id="cost" placeholder="cost">
 </div>
 <div>
     <div  class="inputbutton pointer btn" id="create"  style="color: white; font-weight: bolder;">Add</div>
@@ -112,8 +119,6 @@
     <script src="html-js/main.js">
 
     </script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
      
      <script>
         $(window).load(function(){        
