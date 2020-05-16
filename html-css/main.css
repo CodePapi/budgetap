@@ -13,9 +13,9 @@ html{
     height: 55vh;
     display: flex;
     justify-content: center;
-}/*
+}
 .wrapper{
-   
+   width: 90vw;
     height: 55vh;
   margin-top: -350px;
  
@@ -26,11 +26,15 @@ html{
 .subwrapper{
 text-align: center;
 }
+
 h1{
     color: #E6E6DC;
     font-family: Nunito;
     font-size: larger;
+
 }
+
+
 .rect{
   
 width: 186px;
@@ -38,6 +42,7 @@ height: 149px;
 
 background-color: #FFFFFF;
 }
+
 .sub-rect{
    
     width: 161px;
@@ -46,10 +51,12 @@ background-color: #FFFFFF;
     
     background-color: #FFFFFF;
 }
+
 .mainsection{
     display: flex;
 
 }
+
 .rect2{
 
     display: flex;
@@ -116,13 +123,20 @@ background: #81A594;
 }
 .btndelete{
     padding-left: 10px;
+    display: none;
+
 }
+li{
+    display: flex;
+}
+
 .time,.div,.cost, .btndelete{
    
     width: 244px;
 height: 30px;
 
 }
+
 .thead{
     width: 766px;
 height: 79px;
@@ -147,14 +161,15 @@ ol>li{
     width: 750px;
     height: 79px;
     /*border: 1px solid #81A594;*/
-    /*box-sizing: border-box;
+
+    box-sizing: border-box;
     display: flex;
     margin-bottom: 15px;
 }
 .time{
     font-size: small;
     color: #81A594;
-}
+}/*
 #checkSum{
     background-color: #81A594;
     color: #E6E6DC;
@@ -225,6 +240,7 @@ text-align: center;
    }
    .thead{
        max-width: 90vw;
+       height: inherit;
        display: flex;
        background: #FFFFFF;
        border: 1px solid #81A594;
@@ -278,7 +294,34 @@ text-align: center;
      display: flex;
     margin-left: -50px;
  }
- 
+ .mainsection{
+    display: block;
+
+}
+
+div > .btn{
+    width: 100px;
+height: 40px;
+
+
+background: #81A594;
+}
+.pad1,.time,.div,.cost{
+    padding: 15px;
+}
+
+ol>li{
+    padding: 30px;
+    font-size: 20px;
+
+    width: 90vw;
+    height: 40px;
+    /*border: 1px solid #81A594;*/
+
+    box-sizing: border-box;
+    display: flex;
+    margin-bottom: 15px;
+}
  
    }
   
