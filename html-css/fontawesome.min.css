@@ -1,0 +1,132 @@
+body {
+    background: #ccc;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 13px;
+  }
+  .box {
+    background: #fff;
+    width: 20em;
+    padding: 1em 2em 2em;
+    margin: 3em 2em;
+    border-radius: 4px;
+  }
+  h1 {
+    font-size: 18px;
+  }
+  p {
+    margin-top: 0;
+    margin-bottom: 1.5em;
+  }
+  em {
+    font-family: Georgia, serif;
+    line-height: 1.6;
+  }
+  .country-list {
+    width: 19.5em;
+    margin: 20px 0;
+    padding: 8px;
+    border-color: #ccc;
+    appearance: none;
+    background-color: transparent;
+    z-index: 1;
+    border-radius: 2px;
+  }
+  .dropdown {
+    position: relative;
+  }
+  .dropdown:before, .dropdown:after {
+    transition: opacity .15s;
+    position: absolute;
+    top: 33px;
+    right: 21px;
+    content: ' ';
+    height: 9px;
+    width: 2px;
+    background-color: #000;
+    opacity: .12;
+  }
+  .dropdown:before {
+    right: 15px;
+    transform: rotate(45deg);
+  }
+  .dropdown:after {
+    transform: rotate(-45deg);
+  }
+  .dropdown:hover:before, .dropdown:hover:after {
+    opacity: .5;
+  }
+  .countries {
+    width: 20em;
+  /*   outline: 1px solid red; */
+  }
+  .country {
+    clear: right;
+    height: 39px;
+    line-height: 39px;
+    text-indent: .5em;
+    overflow: hidden;
+    border-top: 1px solid #ededed;
+    transform: translate3d(0, 0, 0); /* Offload to GPU */
+    transition: all .15s; /* Set .fadeout and .slideup transitions duration */
+  }
+  .delete {
+    cursor: pointer;
+    float: right;
+    display: inline-block;
+    margin: 12px .5em;
+    width: 14px;
+    height: 14px;
+    opacity: .12;
+    transition: opacity .15s;
+  }
+  .delete:before, .delete:after {
+    position: absolute;
+    content: ' ';
+    height: 13px;
+    width: 2px;
+    background-color: #000;
+  }
+  .delete:before {
+    transform: rotate(45deg);
+  }
+  .delete:after {
+    transform: rotate(-45deg);
+  }
+  
+  .delete:hover {
+    opacity: .5;
+  }
+  /* Effects */
+  .fadeout {
+    opacity: 0;
+  }
+  .slideup {
+    height: 0;
+  }
+  .slidedown {
+    height: 39px;
+  }
+  .hidden {
+    opacity: 0;
+    height: 0;
+  }
+  .flashin {
+    transition: background-color .45s;
+    background-color: greenyellow;
+  }
+  
+  /* Conditional toggle */
+  .conditional {
+    overflow: hidden;
+    transition: all .45s;
+  }
+  .conditional-toggle {
+    line-height: 1.6;
+    cursor: pointer;
+  }
+  .conditional-check {
+    margin: 0 3px 0 0;
+    vertical-align: middle;
+    position: relative;
+    top: -1px;
+  }
