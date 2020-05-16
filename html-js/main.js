@@ -26,7 +26,11 @@ var count=0
        else{
          return costValue}*/
 let input=document.getElementById('input').value
-
+let inputTitle=document.getElementById('input').value
+let regex=/(<[A-Za-z0-9 . ]+>|)([A-Za-z0-9 .]{0,10})[A-Za-z0-9 .]*(<\/[A-Za-z0-9 .]+>|).*/
+if(document.getElementById('input').value.length>10){
+   input= input.replace(regex, '$1$2$3')
+}
         div.appendChild(document.createTextNode(input))
       cost.appendChild(document.createTextNode(costValue))
 
@@ -35,14 +39,20 @@ let input=document.getElementById('input').value
 var time = new Date().getMinutes()+" :"+new Date().getHours() +"   " + new Date().getDate().toString() + " /" + new Date().getMonth() + " /" + new Date().getFullYear()
 var creatTime = document.createElement('DIV')
 creatTime.appendChild(document.createTextNode(time))
+
+var  createListNumber=document.createElement('DIV')
+createListNumber.appendChild(document.createTextNode(count))
+createListNumber.className="SN"
 creatTime.className="time"
 div.className="div"
+div.title=inputTitle
 cost.className="cost cost"+count
 cost.id=count
   var button=document.createElement("BUTTON");
   var delet = document.createTextNode('Delete')
   button.appendChild(delet);
   //var textnode = document.createTextNode(markup)
+  node.appendChild(createListNumber)
   node.appendChild(creatTime)
   node.appendChild(div);
   node.appendChild(cost)
