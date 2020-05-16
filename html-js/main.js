@@ -44,7 +44,8 @@ if(document.getElementById('input').value.length>10){
 
 // var textnode = document.createTextNode(div)
 //var costnode = document.createTextNode(div2.innerHTML)
-var time = new Date().getMinutes()+" :"+new Date().getHours() +"   " + new Date().getDate().toString() + " /" + new Date().getMonth() + " /" + new Date().getFullYear()
+var time = new Date().getMinutes()+" :"+new Date().getHours() +"   " + new Date().getDate().toString() + " /" + new Date().getMonth()
+// + " /" + new Date().getFullYear()
 var creatTime = document.createElement('DIV')
 creatTime.appendChild(document.createTextNode(time))
 
@@ -155,7 +156,8 @@ console.log(bParent)
 //let total =getElementById('total').innerHTML
 
 document.getElementById('calculate').addEventListener('click', (()=>{
-  let balance=budget-sum
+
+  let balance=parseInt(document.getElementById('amountbudget').innerHTML)-sum
   document.getElementById('balance').innerHTML=balance
 }))
 
