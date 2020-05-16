@@ -177,7 +177,7 @@ ol>li{
 }*/
 @media screen and (max-width: 600px){
    .wrapper{
-       margin-top: -230px;
+       margin-top: -280px;
    }
    .mainsection1{
       text-align: center;
@@ -187,8 +187,8 @@ ol>li{
    .rect2{
        display: flex;
        justify-content: center;
-       flex-wrap: wrap;
-    display: flex;
+       /*flex-wrap: wrap;*/
+   
     width: 90vw;
      padding-top:15px ;
      background-color: #E6E6DC;
@@ -219,15 +219,15 @@ text-align: center;
    .inputitem, .inputcost{
     
 
-    width: 30vw;
-    height: 20px;
+   max-width: 30vw;
+    height: 40px;
     
     
     background: #FFFFFF;
     }
     .inputbutton{
-        width: 20vw;
-   height: 25px;
+        max-width: 20vw;
+   height: 45px;
     
     
     background: #81A594;
