@@ -340,10 +340,12 @@ height: 40px;
 
 background: #81A594;
 }
-.pad1,.time,.div,.cost{
+.time,.div,.cost{
     padding: 15px;
 }
-
+.pad1{
+    padding: 5px;
+}
 ol>li{
     padding: 30px;
     font-size: 20px;
@@ -369,6 +371,13 @@ ol>li{
  .time{
      font-size: 10px;
  }
+
+ .rect3{
+    display: flex;
+    width: 90vw;
+   
+    margin-top:30px;
+}
  
    }
   
