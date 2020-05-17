@@ -144,7 +144,7 @@ console.log(bParent)
    document.getElementById('checkSum').addEventListener('click', (()=>{
     //innerHTMLnumber.push[0]
    if(sum> sib){
-   var b= document.getElementById('total').innerHTML=sum-sib
+   var b= document.getElementById('total').innerHTML=parseInt(document.getElementById('total').innerHTML)-sib
    }
    else if(sum<sib){
     document.getElementById('total').innerHTML=sum
@@ -181,7 +181,7 @@ console.log("clicked")
   })
   )
 window.addEventListener('mouseup', (()=>{
-document.getElementById('show').innerHTML="no value yet"
+document.getElementById('show').innerHTML=""
 //console.log(ev())
 
 

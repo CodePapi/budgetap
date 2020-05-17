@@ -201,7 +201,7 @@ ol>li{
     color: #E6E6DC;
     font-size: x-large;
 }*/
-@media screen and (max-width: 600px){
+@media screen and (max-width: 1000px){
    .wrapper{
        margin-top: -280px;
    }
