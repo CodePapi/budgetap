@@ -4,6 +4,13 @@ html{
     background-color: #E6E6DC;
     font-family: Nunito;
 }
+#ul>div{
+    padding: 1em;
+    background: #eee;
+}
+#ul>div:nth-child(odd){
+    background: #ddd;
+}
 
 .pointer{
     cursor: pointer;
@@ -74,7 +81,8 @@ background-color: #FFFFFF;
 
 .rect2{
 
-    display: flex;
+    display: grid;
+    grid-template-columns: 35% 35% 30%;
    max-width: 850px;
     height: 109px;
     padding-top:15px ;
@@ -127,8 +135,9 @@ border-radius: 10px;
 margin-top: 40px;
 }
 .rect3{
-    display: flex;
+    display: grid;
     width: 850px;
+    grid-template-columns: 33% 33% 33%;
    /* height: 109px;*/
    /* padding-top:15px ;*/
     background-color: white;
@@ -137,41 +146,44 @@ margin-top: 40px;
 }
 div > .btn{
     width: 180px;
-height: 58px;
+
 
 
 background: #81A594;
 }
-.pad1,.time,.div,.cost{
+.pad1{
     padding: 15px;
 }
+
 .btndelete{
     padding-left: 10px;
     display: none;
 
 }
-li{
-    display: flex;
+
+
+
+.test{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
 }
-
-.time,.div,.cost, .btndelete{
-   
-    width: 244px;
-height: 30px;
-
-}
-
 .thead{
     width: 766px;
 height: 79px;
 background: #FFFFFF;
 border: 1px solid #81A594;
 box-sizing: border-box;
-display: flex;
+display: grid;
+grid-template-columns: 25% 25% 25% 25%;
 }
 .br{
    padding-top: 20px;
 
+}
+.test>div{
+    padding: 30px;
+    font-size: 30px;
+    font-weight: bolder;
 }
 .thead>div{
     padding: 30px;
@@ -190,12 +202,7 @@ ol>li{
     display: flex;
     margin-bottom: 15px;
 }
-.time{
-    font-size: small;
-    color: #81A594;
-    display: flex;
-    width: 100px;
-}/*
+/*
 #checkSum{
     background-color: #81A594;
     color: #E6E6DC;
@@ -212,7 +219,7 @@ ol>li{
      
    }
    .rect2{
-       display: flex;
+      
        justify-content: center;
        /*flex-wrap: wrap;*/
    height: 70px;
@@ -267,16 +274,27 @@ text-align: center;
        flex-wrap: wrap;
        width: 90vw;
    }
+   .test{
+    max-width: 80vw;
+    height: inherit;
+   background: #FFFFFF;
+    border: 1px solid #81A594;
+    box-sizing: border-box;
+
+   }
    .thead{
        max-width: 80vw;
        height: inherit;
-       display: flex;
+      
        background: #FFFFFF;
        border: 1px solid #81A594;
        box-sizing: border-box;
       
        }
-
+.test>div{
+    padding: 5px;
+        font-size: small;
+}
        .thead>div{
         padding: 5px;
         font-size: small;
@@ -308,14 +326,7 @@ text-align: center;
      width: 50px; 
     
     }
-    .time{
-        width: 100px;
-        display: flex;
-        padding: 5px;
-    }
-    .cost{
-        padding-left: 150px;
-    }
+    
     
     
     .btndelete{
@@ -335,21 +346,19 @@ text-align: center;
 }
 
 div > .btn{
-    width: 80px;
-height: 40px;
+    width: 90px;
+
 
 
 background: #81A594;
 }
-.time,.div,.cost{
-    padding: 15px;
-}
+
 .pad1{
     padding: 5px;
 }
 ol>li{
-    padding: 30px;
-    font-size: 20px;
+   /* padding: 30px;
+    font-size: 20px;*/
 
     width: 90vw;
     height: 40px;
@@ -369,14 +378,12 @@ ol>li{
      padding-top: 30px;
      margin-bottom: 20px;
  }
- .time{
-     font-size: 10px;
- }
+
 
  .rect3{
-    display: flex;
+    display: grid;
     width: 90vw;
-   
+   grid-template-columns: 33% 33% 33%;
     margin-top:30px;
 }
  
