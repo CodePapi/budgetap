@@ -56,7 +56,8 @@ if(document.getElementById('input').value.length>10){
       cost.appendChild(document.createTextNode(parseInt(costValue)))
 
 //this is the time function that auto updates the time a bew valie was added
-var time =new Date().getHours() +" :"+new Date().getMinutes() +"\n" + new Date().getDate().toString() + " /" + new Date().getMonth()
+var time =new Date().getHours() +" :"+new Date().getMinutes()
+ //+"\n" + new Date().getDate().toString() + " /" + new Date().getMonth()
 // + " /" + new Date().getFullYear()
 //the commented time functions above can be used if time requires date and year
 
