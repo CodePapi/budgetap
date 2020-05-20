@@ -7,7 +7,7 @@ html{
 footer{
    
    
-    height: 50px;
+    height: 20px;
     width: auto;
     display: grid;
     background-color: black;
@@ -233,7 +233,7 @@ ol>li{
     font-size: x-large;
 }*/
 @media screen and (max-width: 1200px){
-    footer{
+  /*  footer{
         height: 90vh;
     width: 40px;
     display: grid;
@@ -254,6 +254,7 @@ ol>li{
     .show{
         display: none !important;
     }
+    */
    .wrapper{
        margin-top: -280px;
    }
