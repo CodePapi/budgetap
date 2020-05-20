@@ -187,8 +187,7 @@ background: #81A594;
 
 
 .btndelete{
-    padding-left: 10px;
-    display: none;
+    
 
 }
 
@@ -196,7 +195,7 @@ background: #81A594;
 
 .test{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 2fr 2fr 2fr 0.5fr 0.5fr;
     grid-gap: 1em;
 }
 .thead{
@@ -368,7 +367,7 @@ text-align: center;
         display: flex;
         flex-wrap: wrap;
     }*/
-     .btndelete, .SN, .div, .cost{
+     .SN, .div, .cost{
      padding: 5px;
      font-size: small;
      width: 50px; 
@@ -378,7 +377,7 @@ text-align: center;
     
     
     .btndelete{
- display: none;
+ 
     }
     .mainsection> section{
      padding-left: 0px;

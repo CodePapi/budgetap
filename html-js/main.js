@@ -56,8 +56,7 @@ if(document.getElementById('input').value.length>10){
       cost.appendChild(document.createTextNode(parseInt(costValue)))
 
 //this is the time function that auto updates the time a bew valie was added
-var time =new Date().getHours() +" :"+new Date().getMinutes() 
-//+"   " + new Date().getDate().toString() + " /" + new Date().getMonth()
+var time =new Date().getHours() +" :"+new Date().getMinutes() +"\n" + new Date().getDate().toString() + " /" + new Date().getMonth()
 // + " /" + new Date().getFullYear()
 //the commented time functions above can be used if time requires date and year
 
@@ -65,7 +64,7 @@ var time =new Date().getHours() +" :"+new Date().getMinutes()
 //the time was gotten from the time variable
 creatTime.appendChild(document.createTextNode(time))
 //list was gotten from the count variable
-createListNumber.appendChild(document.createTextNode(count))
+createListNumber.appendChild(document.createTextNode( document.getElementById('ul').childElementCount + 1))
 
 //the .className and .id indicates the creation of DOM classes and IDs  of indicated variables 
 createListNumber.className="SN"
@@ -77,12 +76,14 @@ cost.id=count
 
 //this create element function below created a button element 
 //and delet vareable created the text to be attached to each button element
-  var button=document.createElement("BUTTON");
-  var delet = document.createTextNode('Delete')
+  var button=document.createElement("I");
+ var delet = document.createTextNode('')
   //the text was attached to the button using the function below
   button.appendChild(delet);
   //the node function, being the parent function was used to append list number, time
   //items, cost and delete button in the order
+ // button.className="fa fa-trash"
+ 
   node.appendChild(createListNumber)
   node.appendChild(creatTime)
   node.appendChild(div);
@@ -93,7 +94,7 @@ cost.id=count
  //node.id="file"
   document.getElementById("ul").appendChild(node);
   //button DOM class name
-  button.className='btndelete'
+  button.className='btndelete fa fa-trash pointer'
  //this empty array funtion was used to push in all cost inputs as strings in array
 var innerHTML=[]
 var divs = document.querySelectorAll('div .cost');
@@ -130,11 +131,18 @@ console.log(sum)
 //but i delibrately removed the button using css display="none"
 //ignore all the algorithms in this function as i deactivated the button for some reasons
 button.addEventListener('click', (()=>{
+
    var btnRemoved= button.parentElement.remove()
-  
- let sib=  button.previousElementSibling.innerHTML
- console.log(sum)
- var bParent = button.parentElement
+  var deletedLink=button.previousElementSibling.previousElementSibling.previousSibling.previousSibling
+  var deletedLinkParent = deletedLink.parentElement
+ var deletedLinkParentNextSibling = deletedLinkParent.nextElementSibling
+  console.log(deletedLinkParentNextSibling)
+  console.log(deletedLink)
+ let sib=  parseInt(button.previousElementSibling.innerHTML)
+ var newTotal=document.getElementById('total').innerHTML= parseInt(document.getElementById('total').innerHTML)- parseInt(button.previousElementSibling.innerHTML)
+ console.log(newTotal)
+ document.getElementById('added').innerHTML="N "+parseInt(button.previousElementSibling.innerHTML) + " has been deleted"
+ /*var bParent = button.parentElement
 console.log( bParent.previousElementSibling)
 console.log(bParent)
  //var newSum=sum-sib
@@ -145,6 +153,7 @@ console.log(bParent)
     // innerHTMLnumber.length
     
      }, 2000)
+     
      setTimeout(()=>{
      document.getElementById('show').innerHTML="N "+sib + " has been deleted"
     // innerHTMLnumber.length
@@ -172,16 +181,16 @@ console.log(bParent)
       document.getElementById('total').innerHTML=sum
      }
     }))
-    
+    */
  }))
  
 //let total =getElementById('total').innerHTML
 //this function checks for total value if the calculate button is clicked
 document.getElementById('calculate').addEventListener('click', (()=>{
 
-    let balance=parseInt(document.getElementById('amountbudget').innerHTML)-sum
+    let balance=parseInt(document.getElementById('amountbudget').innerHTML)-parseInt(document.getElementById('total').innerHTML)
     document.getElementById('balance').innerHTML=balance
-    if(balance<=0||balance< sum){
+    if(balance<=10){
       document.getElementById("added").innerHTML="You need to top up your budget 😢"
       document.getElementById("added").style.color='red'
     }
