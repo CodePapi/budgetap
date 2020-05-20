@@ -9,8 +9,8 @@ $(function () {
  $('#download').click(function () {
         var doc = new jsPDF();
         doc.fromHTML($('#file').html(), 15, 15, {
-            'width': 170,'elementHandlers': specialElementHandlers
+            'width': 200,'elementHandlers': specialElementHandlers
         });
-        doc.save(count+'.pdf');
+        doc.save("budgetapp"+count+'.pdf');
     });  
 });
