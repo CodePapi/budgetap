@@ -8,11 +8,33 @@
     <link rel="stylesheet" href="html-css/main.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+   <!----<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>-->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.2.61/jspdf.min.js"></script>
+  <script src="html-js/jsPDF.js"></script>
 </head>
 <body>
-    
+  
+<div class="topnav" id="myTopnav">
+  <a href="#home" class="active">Home</a>
+  <a href="#news">News</a>
+  <a href="#contact">Contact</a>
+  <div class="dropdown">
+    <button class="dropbtn">Dropdown 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </div>
+  </div> 
+  <a href="#about">About</a>
+  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
 
+  
 <div id="myModal"  class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <!-- Modal content-->
@@ -29,7 +51,7 @@
 
         </div>
         <div class="modal-footer" style="display: flex;">
-            <button id="addAmount" class="pointer btn btn-primary" data-dismiss="modal">Add</button>
+            <button id="addAmount" class="pointer btn btn-primary" data-dismiss="modal">Add </button>
           <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
         </div>
         </section>
@@ -48,12 +70,12 @@
 <section class="mainsection">
     <section class="mainsection1">
         <div class="rect">
-            <h3 class="budget teal">BUDGET AMOUNT</h3>
+            <h3 class="budget teal h3">BUDGET AMOUNT</h3>
             <h3 class="amount" >N <span id="amountbudget">0</span></h3>
         </div>
         <br>
         <div class="sub-rect">
-            <h3 class="teal pointer" id="top"  class="btn btn-primary" data-toggle="modal" data-target="#myModal">TOP UP</h3>
+            <h3 class="teal pointer" id="top"  class="btn btn-primary" data-toggle="modal" data-target="#myModal"><i class="fa fa-plus-circle"></i> TOP UP</h3>
         </div>
     </section>
     <section class="mainsection2">
@@ -65,19 +87,19 @@
     <input type="number" class="inputcost" id="cost" placeholder="cost">
 </div>
 <div>
-    <div  class="inputbutton pointer btn" id="create"  style="color: white; font-weight: bolder;">Add</div>
+    <div  class="inputbutton pointer btn white btn-success" id="create" >Add</div>
 </div>
 </div>
 <section class="br hide"><br><br></section>
 <div class="sub-rect2">
-    <section class="sub">
+    <section class="sub" id="file">
     <section class="thead">
         <div>S/N</div>
         <div>Time</div>
         <div>Purpose/Item</div>
         <div>Cost</div>
     </section>
-    <section class="tbody" id="todo">
+    <section class="tbody">
         <div class="ol" id="ul">
             
         </div>
@@ -86,6 +108,7 @@
 </section>
 
 </div>
+<div id="editor"></div>
 <br>
 <section style="padding-top: 30px;">
         
@@ -93,7 +116,7 @@
 <h1 id="show" style="display: none !important;">0</h1>
 <h1 id="added"></h1>
 <div><h1>Total Amount : <span id="total"><span></h1>
-    <button id="checkSum" class="pointer">Check   Total</button>
+    <!--<button id="checkSum" class="pointer">Check   Total</button>-->
     <div><h1>Balance: <span id="balance"></span></h1></div>
 </div>
 </div>
@@ -101,13 +124,13 @@
 <br><br>
 <div class="rect3">
 <div class="pad1">
-    <div class="btn pointer btn-success" id="calculate"><h3 class="white">Calculate</h3></div>
+    <div class="btn pointer btn-success" id="calculate"><h3 class="white">Calculate <i class="fa fa-calculator"></i></h3></div>
 </div>
 <div class="pad1">
-    <div class="btn pointer btn-success" ><h3 class="white" onclick="alert('will be available shortly')">Save as PDF</h3></div>
+    <div id="download" class="btn pointer btn-success" ><h3 class="white">Save as PDF <i class="fa fa-download"></i></h3></div>
 </div>
 <div class="pad1">
-    <div class="btn pointer btn-success"><h3 class="white" onclick="alert('will be available shortly')">Share App</h3></div>
+    <div class="btn pointer btn-success"><h3 class="white" onclick="alert('will be available shortly')">Share App <i class="fa fa-share"></i></h3></div>
 </div>
 </div>
 
@@ -127,33 +150,20 @@
   $('#myModal').modal('show');
    }); 
    </script>
+
+
+<script>
+
+  function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+  </script>
 </body>
 
 
-<!-- Button trigger modal -->
-<!--<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#topup">
-    Launch demo modal
-  </button>
-  
-  <!-- Modal -->
-  <!--<div class="modal fade" id="topup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          ...
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
-        </div>
-      </div>
-    </div>
-  </div>
--->
 </html>
