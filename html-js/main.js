@@ -181,6 +181,14 @@ document.getElementById('calculate').addEventListener('click', (()=>{
 
     let balance=parseInt(document.getElementById('amountbudget').innerHTML)-sum
     document.getElementById('balance').innerHTML=balance
+    if(balance<=0||balance< sum){
+      document.getElementById("added").innerHTML="You need to top up your budget 😢"
+      document.getElementById("added").style.color='red'
+    }
+    else if(balance>sum){
+      document.getElementById("added").innerHTML="Sufficient 😁"
+      document.getElementById("added").style.color='green'
+    }
 }))
 
  document.getElementById('total').innerHTML=sum
