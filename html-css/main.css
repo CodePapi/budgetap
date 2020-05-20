@@ -137,6 +137,9 @@ input:focus{
 input{
     border: none;
 }
+.btn{
+    border: none;
+}
 .inputbutton{
     width: 124px;
 height: 60px;
