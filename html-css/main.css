@@ -4,12 +4,29 @@ html{
     background-color: #E6E6DC;
     font-family: Nunito;
 }
+footer{
+   
+   
+    height: 50px;
+    width: auto;
+    display: grid;
+    background-color: black;
+    color: white;
+    justify-items: center;
+    grid-template-columns: repeat(1, 1fr);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    font-weight: bolder;
+   
+
+}
 #ul>div{
     padding: 1em;
-    background: #eee;
+    background: white;
 }
 #ul>div:nth-child(odd){
-    background: #ddd;
+    background: #eee;
 }
 div > .btn{
   
@@ -141,13 +158,13 @@ margin-top: 40px;
 }
 .rect3{
     display: grid;
-    width: 850px;
+   
     padding-top: 5px;
     padding-bottom: 5px;
-    grid-template-columns: 33% 33% 33%;
+    grid-template-columns: repeat(3, 1fr);
    /* height: 109px;*/
    /* padding-top:15px ;*/
-    background-color: white;
+    background-color: black;
     /*flex-wrap: wrap;*/
    /* margin-top:30px;*/
 }
@@ -180,7 +197,7 @@ background: #FFFFFF;
 
 box-sizing: border-box;
 display: grid;
-grid-template-columns: 25% 25% 25% 25%;
+grid-template-columns: repeat(4, 1fr);
 }
 .br{
    padding-top: 20px;
@@ -216,6 +233,27 @@ ol>li{
     font-size: x-large;
 }*/
 @media screen and (max-width: 1200px){
+    footer{
+        height: 90vh;
+    width: 40px;
+    display: grid;
+    background-color: black;
+    color: white;
+    justify-items: center;
+    grid-template-columns: repeat(1, 1fr);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    font-weight: bolder;
+       
+    
+    }
+    .hide{
+        display: block !important;
+    }
+    .show{
+        display: none !important;
+    }
    .wrapper{
        margin-top: -280px;
    }
