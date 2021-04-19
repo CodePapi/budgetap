@@ -14,5 +14,5 @@ error free
 
 
 
-If you encouter any bug, kindly contact me on twitter @Engr_Major
+If you encouter any bug, kindly contact me on twitter @CodePapi_
 
